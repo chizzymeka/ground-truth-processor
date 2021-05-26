@@ -1,0 +1,3183 @@
+[
+  {
+    "apache-tomcat-7.0.108-src": {
+      "CVE-2021-25329": {
+        "74b10565": {
+          "https://github.com/apache/tomcat/commit/74b105657ffbd1d1de80455f03446c3bbf30d1f5": {
+            "java/org/apache/catalina/session/FileStore.java": {
+              "vulnerableComponents": {
+                "FileStore": [
+                  "file(String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/HostConfig.java": {
+              "vulnerableComponents": {
+                "HostConfig": [
+                  "deployDescriptor(ContextName, File)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "fixDocBase()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "validateGlobalXsltFile(File)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ExpandWar.java": {
+              "vulnerableComponents": {
+                "ExpandWar": [
+                  "expand(Host, URL, String)",
+                  "validate(Host, URL, String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.107-src": {
+      "CVE-2021-24122": {
+        "800b0314": {
+          "https://github.com/apache/tomcat/commit/800b03140e640f8892f27021e681645e8e320177": {
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "validate(File, String, boolean, String, String)",
+                  "isInvalidWindowsFilename(String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.105-src": {
+      "CVE-2020-13935": {
+        "f9f75c14": {
+          "https://github.com/apache/tomcat/commit/f9f75c14678b68633f79030ddf4ff827f014cc84": {
+            "java/org/apache/tomcat/websocket/WsFrameBase.java": {
+              "vulnerableComponents": {
+                "WsFrameBase": [
+                  "processRemainingHeader()"
+                ]
+              }
+            }
+          }
+        },
+        "4c049828": {
+          "https://github.com/apache/tomcat/commit/4c04982870d6e730c38e21e58fb653b7cf723784": {
+            "java/org/apache/catalina/websocket/WsFrame.java": {
+              "vulnerableComponents": {
+                "WsFrame": []
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.104-src": {
+      "CVE-2020-9484": {
+        "53e30390": {
+          "https://github.com/apache/tomcat/commit/53e30390943c18fca0c9e57dbcc14f1c623cfd06": {
+            "java/org/apache/catalina/session/FileStore.java": {
+              "vulnerableComponents": {
+                "FileStore": [
+                  "file(String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.100-src": {
+      "CVE-2019-17569": {
+        "b191a0d9": {
+          "https://github.com/apache/tomcat/commit/b191a0d9cf06f4e04257c221bfe41d2b108a9cc8": {
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "prepareRequest()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/parser/TokenList.java": {
+              "vulnerableComponents": {
+                "TokenList": [
+                  "parseTokenList(Enumeration, Collection)",
+                  "parseTokenList(Reader, Collection)"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/http/parser/TestTokenList.java": {
+              "vulnerableComponents": {
+                "TestTokenList": [
+                  "doTestMultipleHeadersInvalid()",
+                  "testMultipleHeadersValidWithNull()",
+                  "doTestMultipleHeadersValid(boolean)",
+                  "testMultipleWithInvalidMiddle2()",
+                  "testMultiple()",
+                  "testMultipleWithInvalidEnd()",
+                  "testEmptyString()",
+                  "testMultipleWithInvalidEnd2()",
+                  "testSingleInvalid()",
+                  "doTestVary(String, Set, boolean)",
+                  "testMultipleWithInvalidStart()",
+                  "testAll()",
+                  "testMultipleHeadersValidWithoutNull()",
+                  "testMultipleWithInvalidStart2()",
+                  "testSingle()",
+                  "testMultipleWithInvalidMiddle()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2020-1935": {
+        "702bf15b": {
+          "https://github.com/apache/tomcat/commit/702bf15bea292915684d931526d95d4990b2e73d": {
+            "java/org/apache/coyote/http11/InternalInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalInputBuffer": [
+                  "parseHeader()",
+                  "skipLine(int, int)",
+                  "init(SocketWrapper, AbstractEndpoint)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11AprProcessor.java": {
+              "vulnerableComponents": {
+                "Http11AprProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProcessor.java": {
+              "vulnerableComponents": {
+                "Http11NioProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractInputBuffer.java": {
+              "vulnerableComponents": {
+                "AbstractInputBuffer": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Protocol.java": {
+              "vulnerableComponents": {
+                "Http11Protocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProtocol.java": {
+              "vulnerableComponents": {
+                "Http11NioProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/MimeHeaders.java": {
+              "vulnerableComponents": {
+                "MimeHeaders": [
+                  "removeHeader(int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11AprProtocol.java": {
+              "vulnerableComponents": {
+                "Http11AprProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/InternalNioInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalNioInputBuffer": [
+                  "parseHeader()",
+                  "skipLine()",
+                  "getParsingRequestLinePhase()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Processor.java": {
+              "vulnerableComponents": {
+                "Http11Processor": []
+              }
+            },
+            "java/org/apache/coyote/http11/InternalAprInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalAprInputBuffer": [
+                  "parseHeader()",
+                  "skipLine(int, int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Protocol.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Protocol": [
+                  "setRejectIllegalHeaderName(boolean)",
+                  "getRejectIllegalHeaderName()",
+                  "getRejectIllegalHeader()",
+                  "setRejectIllegalHeader(boolean)"
+                ]
+              }
+            },
+            "test/org/apache/coyote/http11/TestInternalInputBuffer.java": {
+              "vulnerableComponents": {
+                "TestInternalInputBuffer": [
+                  "testBug51557CtlInValue()",
+                  "doRequest()",
+                  "testBug59089()",
+                  "testBug51557BoundaryEnd()",
+                  "isResponseBodyOK()",
+                  "testBug51557CRStartName()",
+                  "testBug51557CR2StartName()",
+                  "doTestBug51557ValidCharInValue(char)",
+                  "doTestBug51557CharInName(char)",
+                  "testBug51557SeparatorsInName()",
+                  "testBug51557ObsTextInValue()",
+                  "doTestBug51557InvalidCharInValue(char)",
+                  "testBug51557CtlInName()",
+                  "testBug51557BoundaryStart()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/parser/HttpParser.java": {
+              "vulnerableComponents": {
+                "HttpParser": [
+                  "isControl(int)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2020-1938": {
+        "b99fba5b": {
+          "https://github.com/apache/tomcat/commit/b99fba5bd796d876ea536e83299603443842feba": {
+            "java/org/apache/coyote/ajp/AjpNioProtocol.java": {
+              "vulnerableComponents": {
+                "AjpNioProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProtocol.java": {
+              "vulnerableComponents": {
+                "AjpAprProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProcessor": [
+                  "prepareRequest()",
+                  "setAllowedRequestAttributesPatternPattern(Pattern)",
+                  "setRequiredSecret(String)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpProtocol.java": {
+              "vulnerableComponents": {
+                "AjpProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "test/org/apache/coyote/ajp/TestAbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "TestAbstractAjpProcessor": [
+                  "setUp()"
+                ]
+              }
+            }
+          }
+        },
+        "40d5d93b": {
+          "https://github.com/apache/tomcat/commit/40d5d93bd284033cf4a1f77f5492444f83d803e2": {
+            "java/org/apache/coyote/ajp/AbstractAjpProtocol.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProtocol": [
+                  "createUpgradeProcessor(SocketWrapper, org.apache.coyote.http11.upgrade.UpgradeInbound)",
+                  "createUpgradeProcessor(SocketWrapper, HttpUpgradeHandler)",
+                  "getSecret()",
+                  "setRequiredSecret(String)",
+                  "getRequiredSecret()",
+                  "setSecretRequired(boolean)",
+                  "setSecret(String)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpNioProtocol.java": {
+              "vulnerableComponents": {
+                "AjpNioProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProtocol.java": {
+              "vulnerableComponents": {
+                "AjpAprProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProcessor": [
+                  "getTomcatAuthorization()",
+                  "setTomcatAuthorization(boolean)",
+                  "prepareRequest()",
+                  "setTomcatAuthentication(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpProtocol.java": {
+              "vulnerableComponents": {
+                "AjpProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "test/org/apache/coyote/ajp/TestAbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "TestAbstractAjpProcessor": [
+                  "setUp()"
+                ]
+              }
+            }
+          }
+        },
+        "f7180baf": {
+          "https://github.com/apache/tomcat/commit/f7180bafc74cb1250c9e9287b68a230f0e1f4645": {
+            "java/org/apache/coyote/ajp/AbstractAjpProtocol.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProtocol": [
+                  "start()"
+                ]
+              }
+            }
+          }
+        },
+        "0d633e72": {
+          "https://github.com/apache/tomcat/commit/0d633e72ebc7b3c242d0081c23bba5e4dacd9b72": {
+            "java/org/apache/coyote/ajp/AjpNioProtocol.java": {
+              "vulnerableComponents": {
+                "AjpNioProtocol": []
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProtocol.java": {
+              "vulnerableComponents": {
+                "AjpAprProtocol": []
+              }
+            },
+            "java/org/apache/tomcat/util/compat/JreCompat.java": {
+              "vulnerableComponents": {
+                "JreCompat": [
+                  "getLoopbackAddress()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/compat/Jre7Compat.java": {
+              "vulnerableComponents": {
+                "Jre7Compat": [
+                  "getLoopbackAddress()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpProtocol.java": {
+              "vulnerableComponents": {
+                "AjpProtocol": []
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.99-src": {
+      "CVE-2019-17563": {
+        "ab72a106": {
+          "https://github.com/apache/tomcat/commit/ab72a106fe5d992abddda954e30849d7cf8cc583": {
+            "java/org/apache/catalina/authenticator/Constants.java": {
+              "vulnerableComponents": {
+                "Constants": []
+              }
+            },
+            "java/org/apache/catalina/authenticator/AuthenticatorBase.java": {
+              "vulnerableComponents": {
+                "AuthenticatorBase": [
+                  "register(Request, HttpServletResponse, Principal, String, String, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/FormAuthenticator.java": {
+              "vulnerableComponents": {
+                "FormAuthenticator": [
+                  "forwardToErrorPage(Request, HttpServletResponse, LoginConfig)",
+                  "authenticate(Request, HttpServletResponse, LoginConfig)",
+                  "matchRequest(Request)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2019-12418": {
+        "bef3f404": {
+          "https://github.com/apache/tomcat/commit/bef3f40400243348d12f4abfe9b413f43897c02b": {
+            "java/org/apache/catalina/mbeans/JmxRemoteLifecycleListener.java": {
+              "vulnerableComponents": {
+                "JmxRemoteLifecycleListener": [
+                  "createServer(String, String, int, int, HashMap, RMIClientSocketFactory, RMIServerSocketFactory, RMIClientSocketFactory, RMIServerSocketFactory)",
+                  "lookup(String)",
+                  "bind(String, Remote)",
+                  "unbind(String)",
+                  "equals(Object)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.94-src": {
+      "CVE-2019-0232": {
+        "7f0221b9": {
+          "https://github.com/apache/tomcat/commit/7f0221b904956359f2d739aa3a2b53f8c12ed8c7": {
+            "java/org/apache/catalina/servlets/CGIServlet.java": {
+              "vulnerableComponents": {
+                "CGIServlet": [
+                  "setupFromRequest(HttpServletRequest)",
+                  "init(ServletConfig)",
+                  "setCGIEnvironment(HttpServletRequest)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2019-0221": {
+        "44ec74c4": {
+          "https://github.com/apache/tomcat/commit/44ec74c44dcd05cd7e90967c04d40b51440ecd7e": {
+            "java/org/apache/catalina/ssi/SSIPrintenv.java": {
+              "vulnerableComponents": {
+                "SSIPrintenv": [
+                  "process(SSIMediator, String, String[], String[], PrintWriter)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.91-src": {
+      "CVE-2018-11784": {
+        "1840057": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1840057": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "doDirectoryRedirect(HttpServletRequest, HttpServletResponse)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.90-src": {
+      "CVE-2018-8034": {
+        "1833760": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1833760": {
+            "java/org/apache/tomcat/websocket/WsWebSocketContainer.java": {
+              "vulnerableComponents": {
+                "WsWebSocketContainer": [
+                  "createSSLEngine(Map, String, int)",
+                  "connectToServerRecursive(Endpoint, ClientEndpointConfig, URI, Set)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.89-src": {
+      "CVE-2018-8014": {
+        "1831730": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1831730": {}
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.88-src": {
+      "CVE-2018-1336": {
+        "1830376": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1830376": {
+            "java/org/apache/tomcat/util/buf/Utf8Decoder.java": {
+              "vulnerableComponents": {
+                "Utf8Decoder": [
+                  "decodeHasArray(ByteBuffer, CharBuffer)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.85-src": {
+      "CVE-2018-1305": {
+        "1823322": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1823322": {
+            "java/org/apache/catalina/core/ApplicationServletRegistration.java": {
+              "vulnerableComponents": {
+                "ApplicationServletRegistration": [
+                  "getInitParameters()",
+                  "addMapping(String[])",
+                  "setServletSecurity(ServletSecurityElement)",
+                  "setInitParameter(String, String)",
+                  "setInitParameters(Map)",
+                  "getMappings()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": [
+                  "dynamicServletAdded(Wrapper)",
+                  "wasCreatedDynamicServlet(Servlet)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/Tomcat.java": {
+              "vulnerableComponents": {
+                "Tomcat": [
+                  "lifecycleEvent(LifecycleEvent)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/ApplicationContext.java": {
+              "vulnerableComponents": {
+                "ApplicationContext": [
+                  "addServlet(String, String, Servlet)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "authenticatorConfig()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Wrapper.java": {
+              "vulnerableComponents": {
+                "Wrapper": [
+                  "servletSecurityAnnotationScan()",
+                  "setServletSecurityAnnotationScanRequired(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardWrapper.java": {
+              "vulnerableComponents": {
+                "StandardWrapper": [
+                  "stopInternal()",
+                  "getWebModuleKeyProperties()",
+                  "setServletSecurityAnnotationScanRequired(boolean)",
+                  "removeNotificationListener(NotificationListener, NotificationFilter, Object)",
+                  "allocate()",
+                  "unload()",
+                  "load()",
+                  "getObjectNameKeyProperties()",
+                  "backgroundProcess()",
+                  "startInternal()",
+                  "addNotificationListener(NotificationListener, NotificationFilter, Object)",
+                  "getNotificationInfo()",
+                  "initServlet(Servlet)",
+                  "removeNotificationListener(NotificationListener)",
+                  "getServletMethods()",
+                  "servletSecurityAnnotationScan()"
+                ]
+              }
+            }
+          }
+        },
+        "1824360": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1824360": {
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "authenticatorConfig()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2018-1304": {
+        "1823309": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1823309": {
+            "java/org/apache/catalina/realm/RealmBase.java": {
+              "vulnerableComponents": {
+                "RealmBase": [
+                  "findSecurityConstraints(Request, Context)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.84-src": {
+      "CVE-2017-15706": {}
+    }
+  },
+  {
+    "apache-tomcat-7.0.82-src": {
+      "CVE-2017-12617": {
+        "1809978": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1809978": {
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "isInvalidWindowsFilename(String)",
+                  "validate(File, String, boolean, String, String)",
+                  "setDocBase(String)"
+                ]
+              }
+            }
+          }
+        },
+        "1809992": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1809992": {
+            "java/org/apache/naming/resources/VirtualDirContext.java": {
+              "vulnerableComponents": {
+                "VirtualDirContext": [
+                  "validate(File, String, boolean, String)"
+                ]
+              }
+            },
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "file(String, boolean)",
+                  "validate(File, String, boolean, String, String)"
+                ]
+              }
+            }
+          }
+        },
+        "1810014": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1810014": {
+            "java/org/apache/naming/resources/VirtualDirContext.java": {
+              "vulnerableComponents": {
+                "VirtualDirContext": [
+                  "validate(File, String, boolean, String)"
+                ]
+              }
+            },
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "file(String, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1810026": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1810026": {
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "file(String, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.81-src": {
+      "CVE-2017-12616": {
+        "1804729": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1804729": {
+            "java/org/apache/naming/resources/VirtualDirContext.java": {
+              "vulnerableComponents": {
+                "VirtualDirContext": [
+                  "allocate()",
+                  "file(String, boolean)",
+                  "doLookup(String)",
+                  "getAttributes(String)",
+                  "file(String)",
+                  "list(File)"
+                ]
+              }
+            },
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "rename(String, String)",
+                  "doListBindings(String)",
+                  "file(String, boolean)",
+                  "bind(String, Object, Attributes)",
+                  "createSubcontext(String, Attributes)",
+                  "unbind(String)",
+                  "rebind(String, Object, Attributes)",
+                  "file(String)",
+                  "doLookup(String)",
+                  "doGetAttributes(String, String[])",
+                  "validate(File, boolean, String)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2017-12615": {
+        "1804604": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1804604": {
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "rename(String, String)",
+                  "setDocBase(String)",
+                  "bind(String, Object, Attributes)",
+                  "createSubcontext(String, Attributes)",
+                  "rebind(String, Object, Attributes)",
+                  "getName()",
+                  "doListBindings(String)"
+                ]
+              }
+            }
+          }
+        },
+        "1804729": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1804729": {
+            "java/org/apache/naming/resources/VirtualDirContext.java": {
+              "vulnerableComponents": {
+                "VirtualDirContext": [
+                  "allocate()",
+                  "file(String, boolean)",
+                  "doLookup(String)",
+                  "getAttributes(String)",
+                  "file(String)",
+                  "list(File)"
+                ]
+              }
+            },
+            "java/org/apache/naming/resources/FileDirContext.java": {
+              "vulnerableComponents": {
+                "FileDirContext": [
+                  "rename(String, String)",
+                  "doListBindings(String)",
+                  "file(String, boolean)",
+                  "bind(String, Object, Attributes)",
+                  "createSubcontext(String, Attributes)",
+                  "unbind(String)",
+                  "rebind(String, Object, Attributes)",
+                  "file(String)",
+                  "doLookup(String)",
+                  "doGetAttributes(String, String[])",
+                  "validate(File, boolean, String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.79-src": {
+      "CVE-2017-7674": {
+        "1795816": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1795816": {
+            "java/org/apache/catalina/filters/CorsFilter.java": {
+              "vulnerableComponents": {
+                "CorsFilter": [
+                  "handleSimpleCORS(HttpServletRequest, HttpServletResponse, FilterChain)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.78-src": {
+      "CVE-2017-5664": {
+        "1793471": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1793471": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "findXsltInputStream(DirContext)",
+                  "serveResource(HttpServletRequest, HttpServletResponse, boolean)",
+                  "copyRange(InputStream, ServletOutputStream, long, long)"
+                ]
+              }
+            }
+          }
+        },
+        "1793491": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1793491": {
+            "java/org/apache/catalina/servlets/WebdavServlet.java": {
+              "vulnerableComponents": {
+                "WebdavServlet": [
+                  "service(HttpServletRequest, HttpServletResponse)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "service(HttpServletRequest, HttpServletResponse)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.77-src": {
+      "CVE-2017-5647": {
+        "1789008": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1789008": {
+            "java/org/apache/coyote/http11/Http11NioProcessor.java": {
+              "vulnerableComponents": {
+                "Http11NioProcessor": [
+                  "breakKeepAliveLoop(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/AbstractProtocol.java": {
+              "vulnerableComponents": {
+                "AbstractProtocol": [
+                  "process(SocketWrapper, SocketStatus)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/net/AprEndpoint.java": {
+              "vulnerableComponents": {
+                "AprEndpoint": [
+                  "run()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.76-src": {
+      "CVE-2017-5648": {
+        "1785777": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1785777": {
+            "java/org/apache/catalina/core/AsyncContextImpl.java": {
+              "vulnerableComponents": {
+                "AsyncContextImpl": [
+                  "fireOnComplete()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardHostValve.java": {
+              "vulnerableComponents": {
+                "StandardHostValve": [
+                  "invoke(Request, Response)",
+                  "event(Request, Response, CometEvent)",
+                  "custom(Request, Response, ErrorPage)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/FormAuthenticator.java": {
+              "vulnerableComponents": {
+                "FormAuthenticator": [
+                  "forwardToErrorPage(Request, HttpServletResponse, LoginConfig)",
+                  "forwardToLoginPage(Request, HttpServletResponse, LoginConfig)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.75-src": {
+      "CVE-2016-8745": {
+        "1777471": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1777471": {
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.73-src": {
+      "CVE-2016-6816": {
+        "1767675": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1767675": {
+            "java/org/apache/coyote/http11/InternalInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalInputBuffer": [
+                  "parseRequestLine(boolean)",
+                  "parseHeader()",
+                  "skipLine(int)",
+                  "doRead(ByteChunk, Request)",
+                  "fill(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/InternalNioInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalNioInputBuffer": [
+                  "parseRequestLine(boolean)",
+                  "parseHeader()",
+                  "readSocket(boolean, boolean)",
+                  "parseHeaders()",
+                  "fill(boolean, boolean)",
+                  "doRead(ByteChunk, Request)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/InternalAprInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalAprInputBuffer": [
+                  "parseRequestLine(boolean)",
+                  "doRead(ByteChunk, Request)",
+                  "fill()",
+                  "parseHeader()",
+                  "skipLine(int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractInputBuffer.java": {
+              "vulnerableComponents": {
+                "AbstractInputBuffer": []
+              }
+            },
+            "java/org/apache/tomcat/util/http/parser/HttpParser.java": {
+              "vulnerableComponents": {
+                "HttpParser": [
+                  "isHex(int)",
+                  "isNotRequestTarget(int)",
+                  "isHttpProtocol(int)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2016-8735": {
+        "1767676": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1767676": {
+            "java/org/apache/catalina/mbeans/JmxRemoteLifecycleListener.java": {
+              "vulnerableComponents": {
+                "JmxRemoteLifecycleListener": [
+                  "lifecycleEvent(LifecycleEvent)",
+                  "createServer(String, String, int, int, HashMap, RMIClientSocketFactory, RMIServerSocketFactory, RMIClientSocketFactory, RMIServerSocketFactory)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.72-src": {
+      "CVE-2016-0762": {
+        "1758502": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1758502": {
+            "java/org/apache/catalina/realm/RealmBase.java": {
+              "vulnerableComponents": {
+                "RealmBase": [
+                  "hasResourcePermission(Request, Response, SecurityConstraint[], Context)",
+                  "main(String[])",
+                  "getPrincipal(String, GSSCredential)",
+                  "authenticate(GSSContext, boolean)",
+                  "findSecurityConstraints(Request, Context)",
+                  "digest(String)",
+                  "authenticate(String, String, String, String, String, String, String, String)",
+                  "getDigest(String, String)",
+                  "stopInternal()",
+                  "getObjectNameKeyProperties()",
+                  "Digest(String, String, String)",
+                  "authenticate(String, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/realm/JDBCRealm.java": {
+              "vulnerableComponents": {
+                "JDBCRealm": [
+                  "authenticate(Connection, String, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/realm/MemoryRealm.java": {
+              "vulnerableComponents": {
+                "MemoryRealm": [
+                  "authenticate(String, String)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2016-5018": {
+        "1754902": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1754902": {
+            "java/org/apache/jasper/runtime/JspRuntimeLibrary.java": {
+              "vulnerableComponents": {
+                "JspRuntimeLibrary": [
+                  "introspecthelper(Object, String, String, ServletRequest, String, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1760309": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1760309": {}
+        }
+      },
+      "CVE-2016-6796": {
+        "1758495": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1758495": {
+            "java/org/apache/jasper/EmbeddedServletOptions.java": {
+              "vulnerableComponents": {
+                "EmbeddedServletOptions": []
+              }
+            },
+            "java/org/apache/jasper/servlet/JspServlet.java": {
+              "vulnerableComponents": {
+                "JspServlet": [
+                  "init(ServletConfig)"
+                ]
+              }
+            }
+          }
+        },
+        "1763236": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1763236": {
+            "java/org/apache/naming/factory/ResourceLinkFactory.java": {
+              "vulnerableComponents": {
+                "ResourceLinkFactory": [
+                  "validateGlobalResourceAccess(String)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2016-6797": {
+        "1757275": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1757275": {
+            "java/org/apache/catalina/core/NamingContextListener.java": {
+              "vulnerableComponents": {
+                "NamingContextListener": [
+                  "getGlobalNamingContext()",
+                  "addService(ContextService)",
+                  "lifecycleEvent(LifecycleEvent)",
+                  "createObjectName(ContextResource)",
+                  "addResourceLink(ContextResourceLink)",
+                  "containerEvent(ContainerEvent)",
+                  "createNamingContext()",
+                  "processGlobalResourcesChange(String, Object, Object)",
+                  "addResource(ContextResource)",
+                  "removeResourceLink(String)"
+                ]
+              }
+            },
+            "java/org/apache/naming/factory/ResourceLinkFactory.java": {
+              "vulnerableComponents": {
+                "ResourceLinkFactory": [
+                  "deregisterGlobalResourceAccess(Context, String)",
+                  "validateGlobalResourceAccess(String)",
+                  "deregisterGlobalResourceAccess(Context)",
+                  "validateGlobalContext(Context)",
+                  "getObjectInstance(Object, Name, Context, Hashtable)",
+                  "registerGlobalResourceAccess(Context, String, String)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2016-6794": {
+        "1754728": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1754728": {
+            "java/org/apache/tomcat/util/digester/Digester.java": {
+              "vulnerableComponents": {
+                "Digester": []
+              }
+            },
+            "java/org/apache/catalina/loader/WebappClassLoaderBase.java": {
+              "vulnerableComponents": {
+                "WebappClassLoaderBase": [
+                  "check(Permission)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.70-src": {
+      "CVE-2016-3092": {
+        "1743742": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1743742": {
+            "java/org/apache/tomcat/util/http/fileupload/MultipartStream.java": {
+              "vulnerableComponents": {
+                "MultipartStream": []
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.68-src": {
+      "CVE-2016-0763": {
+        "1725931": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1725931": {
+            "java/org/apache/naming/factory/ResourceLinkFactory.java": {
+              "vulnerableComponents": {
+                "ResourceLinkFactory": [
+                  "setGlobalContext(Context)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2015-5351": {},
+      "CVE-2016-0714": {
+        "1726923": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1726923": {
+            "java/org/apache/catalina/session/ManagerBase.java": {
+              "vulnerableComponents": {
+                "ManagerBase": [
+                  "willAttributeDistribute(String, Object)",
+                  "getSessionAttributeNameFilter()",
+                  "getSessionAttributeValueClassNameFilter()",
+                  "setSessionAttributeNameFilter(String)",
+                  "getSessionAttributeValueClassNamePattern()",
+                  "getSessionAttributeNamePattern()",
+                  "setSessionAttributeValueClassNameFilter(String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/ha/session/ClusterManagerBase.java": {
+              "vulnerableComponents": {
+                "ClusterManagerBase": [
+                  "clone(ClusterManagerBase)"
+                ]
+              }
+            }
+          }
+        },
+        "1727034": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1727034": {
+            "java/org/apache/catalina/util/CustomObjectInputStream.java": {
+              "vulnerableComponents": {
+                "CustomObjectInputStream": [
+                  "resolveClass(ObjectStreamClass)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/session/StoreBase.java": {
+              "vulnerableComponents": {
+                "StoreBase": [
+                  "getObjectInputStream(InputStream)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/session/StandardManager.java": {
+              "vulnerableComponents": {
+                "StandardManager": [
+                  "doLoad()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2015-5345": {
+        "1715213": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1715213": {
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": [
+                  "getMapperDirectoryRedirectEnabled()",
+                  "getMapperContextRootRedirectEnabled()",
+                  "getUseRelativeRedirects()",
+                  "setMapperDirectoryRedirectEnabled(boolean)",
+                  "setMapperContextRootRedirectEnabled(boolean)",
+                  "setUseRelativeRedirects(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "serveResource(HttpServletRequest, HttpServletResponse, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/FailedContext.java": {
+              "vulnerableComponents": {
+                "FailedContext": [
+                  "setValidateClientProvidedNewSessionId(boolean)",
+                  "getMapperContextRootRedirectEnabled()",
+                  "setMapperDirectoryRedirectEnabled(boolean)",
+                  "setMapperContextRootRedirectEnabled(boolean)",
+                  "getMapperDirectoryRedirectEnabled()"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/http/mapper/TestMapperWebapps.java": {
+              "vulnerableComponents": {
+                "TestMapperWebapps": [
+                  "testRedirect()",
+                  "doRedirectTest(String, int)"
+                ]
+              }
+            },
+            "test/org/apache/catalina/startup/TomcatBaseTest.java": {
+              "vulnerableComponents": {
+                "TomcatBaseTest": [
+                  "methodUrl(String, ByteChunk, int, Map, Map, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Context.java": {
+              "vulnerableComponents": {
+                "Context": [
+                  "setMapperContextRootRedirectEnabled(boolean)",
+                  "setMapperDirectoryRedirectEnabled(boolean)",
+                  "getMapperContextRootRedirectEnabled()",
+                  "getMapperDirectoryRedirectEnabled()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/mapper/Mapper.java": {
+              "vulnerableComponents": {
+                "Mapper": [
+                  "addContextVersion(String, Object, String, String, Object, String[], javax.naming.Context, Collection)",
+                  "internalMapWrapper(ContextVersion, CharChunk, MappingData)",
+                  "addContextVersion(String, Object, String, String, Object, String[], javax.naming.Context, Collection, boolean, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1716860": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1716860": {
+            "java/org/apache/catalina/connector/MapperListener.java": {
+              "vulnerableComponents": {
+                "MapperListener": [
+                  "registerContext(Context)"
+                ]
+              }
+            }
+          }
+        },
+        "1717212": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1717212": {
+            "java/org/apache/catalina/servlets/WebdavServlet.java": {
+              "vulnerableComponents": {
+                "WebdavServlet": [
+                  "getRelativePath(HttpServletRequest)",
+                  "getRelativePath(HttpServletRequest, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "serveResource(HttpServletRequest, HttpServletResponse, boolean)",
+                  "getRelativePath(HttpServletRequest, boolean)",
+                  "getRelativePath(HttpServletRequest)",
+                  "displaySize(StringBuilder, int)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/FormAuthenticator.java": {
+              "vulnerableComponents": {
+                "FormAuthenticator": [
+                  "authenticate(Request, HttpServletResponse, LoginConfig)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/mapper/Mapper.java": {
+              "vulnerableComponents": {
+                "Mapper": [
+                  "internalMapWrapper(ContextVersion, CharChunk, MappingData)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2016-0706": {}
+    }
+  },
+  {
+    "apache-tomcat-7.0.67-src": {
+      "CVE-2015-5346": {
+        "1713187": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1713187": {
+            "java/org/apache/catalina/connector/Request.java": {
+              "vulnerableComponents": {
+                "Request": [
+                  "recycleSessionInfo()",
+                  "recycle()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/connector/CoyoteAdapter.java": {
+              "vulnerableComponents": {
+                "CoyoteAdapter": [
+                  "postParseRequest(org.apache.coyote.Request, Request, org.apache.coyote.Response, Response)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.65-src": {
+      "CVE-2015-5174": {
+        "1696284": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1696284": {
+            "test/org/apache/tomcat/util/http/TestRequestUtil.java": {
+              "vulnerableComponents": {
+                "TestRequestUtil": [
+                  "testNormalize13()",
+                  "testNormalize05()",
+                  "testNormalize14()",
+                  "testNormalize06()",
+                  "testNormalize07()",
+                  "testNormalize08()",
+                  "testNormalize09()",
+                  "testNormalize01()",
+                  "testNormalize10()",
+                  "testNormalize02()",
+                  "testNormalize11()",
+                  "testNormalize03()",
+                  "testNormalize12()",
+                  "testNormalize04()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/RequestUtil.java": {
+              "vulnerableComponents": {
+                "RequestUtil": [
+                  "normalize(String, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1700898": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1700898": {
+            "test/org/apache/tomcat/util/http/TestRequestUtil.java": {
+              "vulnerableComponents": {
+                "TestRequestUtil": [
+                  "testNormalize18()",
+                  "testNormalize19()",
+                  "testNormalize14()",
+                  "testNormalize15()",
+                  "testNormalize16()",
+                  "testNormalize17()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/RequestUtil.java": {
+              "vulnerableComponents": {
+                "RequestUtil": [
+                  "normalize(String, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.59-src": {
+      "CVE-2014-7810": {
+        "1644019": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1644019": {
+            "java/javax/el/BeanELResolver.java": {
+              "vulnerableComponents": {
+                "BeanELResolver": [
+                  "populateFromInterfaces(Class)"
+                ]
+              }
+            }
+          }
+        },
+        "1645644": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1645644": {
+            "java/org/apache/jasper/runtime/PageContextImpl.java": {
+              "vulnerableComponents": {
+                "PageContextImpl": [
+                  "proprietaryEvaluate(String, Class, PageContext, ProtectedFunctionMapper, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.55-src": {
+      "CVE-2014-0227": {
+        "1601333": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1601333": {
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "doRead(ByteChunk, Request)",
+                  "parseHeader()",
+                  "recycle()",
+                  "parseChunkHeader()",
+                  "end()",
+                  "throwIOException(String)",
+                  "getEncodingName()",
+                  "parseCRLF(boolean)",
+                  "throwEOFException(String)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2014-0230": {
+        "1603781": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1603781": {
+            "java/org/apache/coyote/http11/Http11AprProcessor.java": {
+              "vulnerableComponents": {
+                "Http11AprProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11AprProtocol.java": {
+              "vulnerableComponents": {
+                "Http11AprProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "initializeFilters(int, int, int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProcessor.java": {
+              "vulnerableComponents": {
+                "Http11NioProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Processor.java": {
+              "vulnerableComponents": {
+                "Http11Processor": []
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Protocol.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Protocol": [
+                  "getMaxSwallowSize()",
+                  "setMaxSwallowSize(int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "end()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Protocol.java": {
+              "vulnerableComponents": {
+                "Http11Protocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/IdentityInputFilter.java": {
+              "vulnerableComponents": {
+                "IdentityInputFilter": [
+                  "end()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProtocol.java": {
+              "vulnerableComponents": {
+                "Http11NioProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            }
+          }
+        },
+        "1603811": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1603811": {
+            "test/org/apache/catalina/core/TestSwallowAbortedUploads.java": {
+              "vulnerableComponents": {
+                "TestSwallowAbortedUploads": [
+                  "doTestChunkedPUT(boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1659295": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1659295": {
+            "java/org/apache/coyote/http11/filters/IdentityInputFilter.java": {
+              "vulnerableComponents": {
+                "IdentityInputFilter": [
+                  "end()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.54-src": {
+      "CVE-2014-0119": {
+        "1588199": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1588199": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": []
+              }
+            },
+            "java/org/apache/catalina/security/SecurityClassLoad.java": {
+              "vulnerableComponents": {
+                "SecurityClassLoad": [
+                  "loadSessionPackage(ClassLoader)",
+                  "loadServletsPackage(ClassLoader)",
+                  "securityClassLoad(ClassLoader)"
+                ]
+              }
+            }
+          }
+        },
+        "1589997": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1589997": {}
+        },
+        "1590028": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1590028": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "renderXml(String, CacheEntry, Source)"
+                ]
+              }
+            }
+          }
+        },
+        "1590036": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1590036": {
+            "java/org/apache/catalina/startup/TldConfig.java": {
+              "vulnerableComponents": {
+                "TldConfig": [
+                  "createTldDigester(boolean, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.53-src": {
+      "CVE-2014-0075": {
+        "1578341": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1578341": {
+            "test/org/apache/coyote/http11/filters/TestChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "TestChunkedInputFilter": [
+                  "testChunkSizeIntegerMinValue()",
+                  "testChunkSizeMinusOne()",
+                  "doPost(HttpServletRequest, HttpServletResponse)",
+                  "doTestExtensionSizeLimit(int, boolean)",
+                  "doTestChunkSize(boolean, boolean, String, int, int)",
+                  "getExceptionDuringRead()",
+                  "getCountRead()",
+                  "testChunkSizeZero()",
+                  "testChunkSizeAbsent()",
+                  "testNoTrailingHeaders()",
+                  "testChunkSizeTwentyFive()",
+                  "testTrailingHeadersSizeLimit()",
+                  "testChunkSizeEightDigit()",
+                  "testChunkSizeNineDigit()",
+                  "testChunkSizeLong()",
+                  "doTestChunkingCRLF(boolean, boolean, boolean, boolean, boolean, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "parseChunkHeader()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2014-0096": {
+        "1578637": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1578637": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "validateGlobalXsltFile()",
+                  "findXsltInputStream(DirContext)"
+                ]
+              }
+            }
+          }
+        },
+        "1578655": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1578655": {
+            "java/org/apache/catalina/servlets/DefaultServlet.java": {
+              "vulnerableComponents": {
+                "DefaultServlet": [
+                  "getExternalSubset(String, String)",
+                  "resolveEntity(String, String)",
+                  "secureXslt(InputStream)",
+                  "findXsltInputStream(DirContext)",
+                  "resolveEntity(String, String, String, String)",
+                  "renderXml(String, CacheEntry, Source)",
+                  "render(String, CacheEntry)",
+                  "validateGlobalXsltFile()",
+                  "validateGlobalXsltFile(File)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2014-0099": {
+        "1578814": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1578814": {
+            "java/org/apache/tomcat/util/buf/Ascii.java": {
+              "vulnerableComponents": {
+                "Ascii": [
+                  "parseLong(byte[], int, int)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.52-src": {
+      "CVE-2014-0050": {
+        "1565169": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1565169": {
+            "java/org/apache/tomcat/util/http/fileupload/MultipartStream.java": {
+              "vulnerableComponents": {
+                "MultipartStream": []
+              }
+            },
+            "java/org/apache/tomcat/util/http/fileupload/FileUploadBase.java": {
+              "vulnerableComponents": {
+                "FileUploadBase": []
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.50-src": {
+      "CVE-2013-4322": {
+        "1521864": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1521864": {
+            "java/org/apache/coyote/http11/Http11AprProcessor.java": {
+              "vulnerableComponents": {
+                "Http11AprProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11AprProtocol.java": {
+              "vulnerableComponents": {
+                "Http11AprProtocol": [
+                  "longPoll(SocketWrapper, Processor)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "initializeFilters(int, int)"
+                ]
+              }
+            },
+            "test/org/apache/coyote/http11/filters/TestChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "TestChunkedInputFilter": [
+                  "doTestExtensionSizeLimit(int, boolean)",
+                  "testNoTrailingHeaders()",
+                  "testExtensionSizeLimitOneBelow()",
+                  "testExtensionSizeLimitExact()",
+                  "testExtensionSizeLimitOneOver()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProcessor.java": {
+              "vulnerableComponents": {
+                "Http11NioProcessor": []
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Processor.java": {
+              "vulnerableComponents": {
+                "Http11Processor": []
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Protocol.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Protocol": [
+                  "getMaxExtensionSize()",
+                  "setMaxExtensionSize(int)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "parseChunkHeader()",
+                  "recycle()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Protocol.java": {
+              "vulnerableComponents": {
+                "Http11Protocol": [
+                  "createProcessor()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProtocol.java": {
+              "vulnerableComponents": {
+                "Http11NioProtocol": [
+                  "createProcessor()"
+                ]
+              }
+            }
+          }
+        },
+        "1549523": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1549523": {
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "recycle()",
+                  "parseHeader()",
+                  "parseChunkHeader()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2013-4590": {
+        "1549529": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1549529": {
+            "test/javax/servlet/resources/TestSchemaValidation.java": {
+              "vulnerableComponents": {
+                "TestSchemaValidation": [
+                  "testWebapp_2_4()",
+                  "testWebapp_2_5()",
+                  "testWebapp_2_2()",
+                  "testWebapp_2_3()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/TldConfig.java": {
+              "vulnerableComponents": {
+                "TldConfig": [
+                  "createTldDigester(boolean, boolean)",
+                  "lifecycleEvent(LifecycleEvent)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": []
+              }
+            },
+            "java/org/apache/jasper/xmlparser/ParserUtils.java": {
+              "vulnerableComponents": {
+                "ParserUtils": [
+                  "parseXMLDocument(String, InputSource)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/descriptor/LocalResolver.java": {
+              "vulnerableComponents": {
+                "LocalResolver": [
+                  "resolveEntity(String, String, String, String)",
+                  "getExternalSubset(String, String)"
+                ]
+              }
+            },
+            "java/org/apache/jasper/compiler/TldLocationsCache.java": {
+              "vulnerableComponents": {
+                "TldLocationsCache": [
+                  "tldScanWebXml()",
+                  "tldScanStream(String, String, InputStream)"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/descriptor/TestLocalResolver.java": {
+              "vulnerableComponents": {
+                "TestLocalResolver": [
+                  "unknownSystemId()",
+                  "unknownNullId()",
+                  "unknownPublicId()",
+                  "unknownRelativeSystemId()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/ApplicationContext.java": {
+              "vulnerableComponents": {
+                "ApplicationContext": [
+                  "getInitParameterNames()",
+                  "getInitParameter(String)"
+                ]
+              }
+            },
+            "java/org/apache/jasper/compiler/ImplicitTagLibraryInfo.java": {
+              "vulnerableComponents": {
+                "ImplicitTagLibraryInfo": []
+              }
+            },
+            "test/org/apache/catalina/core/TesterContext.java": {
+              "vulnerableComponents": {
+                "TesterContext": [
+                  "getXmlBlockExternal()",
+                  "setXmlBlockExternal(boolean)",
+                  "getTldNamespaceAware()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/FailedContext.java": {
+              "vulnerableComponents": {
+                "FailedContext": [
+                  "getXmlBlockExternal()",
+                  "setXmlBlockExternal(boolean)",
+                  "getTldValidation()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Context.java": {
+              "vulnerableComponents": {
+                "Context": [
+                  "setXmlBlockExternal(boolean)",
+                  "getXmlBlockExternal()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/descriptor/DigesterFactory.java": {
+              "vulnerableComponents": {
+                "DigesterFactory": [
+                  "newDigester(boolean, boolean, RuleSet, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/jasper/JspC.java": {
+              "vulnerableComponents": {
+                "JspC": [
+                  "initServletContext()",
+                  "setArgs(String[])",
+                  "setBlockExternal(boolean)",
+                  "isBlockExternal()"
+                ]
+              }
+            },
+            "java/org/apache/jasper/compiler/JspDocumentParser.java": {
+              "vulnerableComponents": {
+                "JspDocumentParser": [
+                  "resolveEntity(String, String)",
+                  "resolveEntity(String, String, String, String)",
+                  "getExternalSubset(String, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "createWebXmlDigester(boolean, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/jasper/Constants.java": {
+              "vulnerableComponents": {
+                "Constants": []
+              }
+            },
+            "java/org/apache/catalina/ant/ValidatorTask.java": {
+              "vulnerableComponents": {
+                "ValidatorTask": [
+                  "execute()"
+                ]
+              }
+            },
+            "java/org/apache/jasper/compiler/TagLibraryInfoImpl.java": {
+              "vulnerableComponents": {
+                "TagLibraryInfoImpl": [
+                  "parseTLD(String, InputStream, JarResource)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Globals.java": {
+              "vulnerableComponents": {
+                "Globals": []
+              }
+            },
+            "java/org/apache/jasper/compiler/JspConfig.java": {
+              "vulnerableComponents": {
+                "JspConfig": [
+                  "processWebDotXml()"
+                ]
+              }
+            },
+            "java/org/apache/jasper/compiler/TagPluginManager.java": {
+              "vulnerableComponents": {
+                "TagPluginManager": [
+                  "loadTagPlugins(ErrorDispatcher, InputStream)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.47-src": {
+      "CVE-2013-4286": {
+        "1521854": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1521854": {
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "prepareRequest()"
+                ]
+              }
+            },
+            "test/org/apache/coyote/http11/TestAbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "TestAbstractHttp11Processor": [
+                  "testWithTEIdentity()",
+                  "doTestWithTEChunked(boolean)",
+                  "testWithTEChunkedWithCL()",
+                  "testWithTEChunked()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProcessor": [
+                  "prepareRequest()"
+                ]
+              }
+            },
+            "test/org/apache/coyote/ajp/TestAbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "TestAbstractAjpProcessor": [
+                  "doTestPost(boolean, int)",
+                  "testPostMultipleContentLength()",
+                  "testPost()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.40-src": {
+      "CVE-2013-4444": {
+        "1470437": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1470437": {
+            "java/org/apache/tomcat/util/http/fileupload/FileItem.java": {
+              "vulnerableComponents": {
+                "FileItem": []
+              }
+            }
+          }
+        }
+      },
+      "CVE-2013-2071": {
+        "1471372": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1471372": {
+            "java/org/apache/catalina/core/AsyncContextImpl.java": {
+              "vulnerableComponents": {
+                "AsyncContextImpl": [
+                  "fireOnComplete()",
+                  "timeout()",
+                  "setStarted(Context, ServletRequest, ServletResponse, boolean)",
+                  "setErrorState(Throwable, boolean)"
+                ]
+              }
+            },
+            "test/org/apache/catalina/core/TestAsyncContextImpl.java": {
+              "vulnerableComponents": {
+                "TestAsyncContextImpl": [
+                  "doGet(HttpServletRequest, HttpServletResponse)",
+                  "testBug54178()",
+                  "onTimeout(AsyncEvent)",
+                  "onComplete(AsyncEvent)",
+                  "onStartAsync(AsyncEvent)",
+                  "onError(AsyncEvent)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.33-src": {
+      "CVE-2013-2067": {
+        "1408044": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1408044": {
+            "java/org/apache/catalina/authenticator/FormAuthenticator.java": {
+              "vulnerableComponents": {
+                "FormAuthenticator": [
+                  "forwardToLoginPage(Request, HttpServletResponse, LoginConfig)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.32-src": {
+      "CVE-2012-4431": {
+        "1393088": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1393088": {
+            "java/org/apache/catalina/filters/CsrfPreventionFilter.java": {
+              "vulnerableComponents": {
+                "CsrfPreventionFilter": [
+                  "doFilter(ServletRequest, ServletResponse, FilterChain)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.30-src": {
+      "CVE-2012-3544": {
+        "1378702": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1378702": {
+            "test/org/apache/coyote/http11/filters/TestChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "TestChunkedInputFilter": [
+                  "testChunkHeaderCRLF()",
+                  "doTestChunkingCRLF(boolean, boolean, boolean, boolean, boolean, boolean)",
+                  "testChunkHeaderLF()",
+                  "testChunkCRLF()",
+                  "testChunkLF()",
+                  "testFirstTrailingHeadersCRLF()",
+                  "testFirstTrailingHeadersLF()",
+                  "testSecondTrailingHeadersCRLF()",
+                  "testSecondTrailingHeadersLF()",
+                  "testEndCRLF()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "parseCRLF()",
+                  "parseCRLF(boolean)",
+                  "parseHeader()",
+                  "doRead(ByteChunk, Request)",
+                  "parseChunkHeader()"
+                ]
+              }
+            },
+            "test/org/apache/catalina/startup/SimpleHttpClient.java": {
+              "vulnerableComponents": {
+                "SimpleHttpClient": [
+                  "readResponse(boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1378921": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1378921": {
+            "test/org/apache/coyote/http11/filters/TestChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "TestChunkedInputFilter": [
+                  "testChunkHeaderCRLF()",
+                  "doPost(HttpServletRequest, HttpServletResponse)",
+                  "testNoTrailingHeaders()",
+                  "doTestChunkingCRLF(boolean, boolean, boolean, boolean, boolean, boolean)",
+                  "testEndLF()",
+                  "testFirstTrailingHeadersLF()",
+                  "testChunkHeaderLF()",
+                  "testSecondTrailingHeadersCRLF()",
+                  "testChunkCRLF()",
+                  "testSecondTrailingHeadersLF()",
+                  "testChunkLF()",
+                  "testEndCRLF()",
+                  "testFirstTrailingHeadersCRLF()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/filters/ChunkedInputFilter.java": {
+              "vulnerableComponents": {
+                "ChunkedInputFilter": [
+                  "parseCRLF()",
+                  "parseHeader()"
+                ]
+              }
+            },
+            "test/org/apache/catalina/startup/SimpleHttpClient.java": {
+              "vulnerableComponents": {
+                "SimpleHttpClient": [
+                  "readResponse(boolean)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2012-3546": {
+        "1377892": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1377892": {}
+        }
+      },
+      "CVE-2012-3439": {
+        "1377807": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1377807": {
+            "java/org/apache/catalina/util/ConcurrentMessageDigest.java": {
+              "vulnerableComponents": {
+                "ConcurrentMessageDigest": []
+              }
+            },
+            "java/org/apache/catalina/authenticator/DigestAuthenticator.java": {
+              "vulnerableComponents": {
+                "DigestAuthenticator": [
+                  "authenticate(Request, HttpServletResponse, LoginConfig)",
+                  "generateNonce(Request)",
+                  "startInternal()",
+                  "nonceCountValid(long)",
+                  "validate(Request, LoginConfig)",
+                  "getTimestamp()",
+                  "parse(Request, String)"
+                ]
+              }
+            },
+            "test/org/apache/catalina/authenticator/TesterDigestAuthenticatorPerformance.java": {
+              "vulnerableComponents": {
+                "TesterDigestAuthenticatorPerformance": [
+                  "doTest(int, int)",
+                  "buildDigestResponse(String)",
+                  "run()",
+                  "setUp()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.28-src": {
+      "CVE-2012-4534": {
+        "1340218": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1340218": {
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean)",
+                  "processSendfile(SelectionKey, KeyAttachment, boolean, boolean)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2012-2733": {
+        "1350301": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1350301": {
+            "java/org/apache/coyote/http11/InternalNioInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalNioInputBuffer": [
+                  "parseHeaders()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.23-src": {
+      "CVE-2012-0022": {
+        "1189899": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1189899": {
+            "java/org/apache/tomcat/util/buf/MessageBytes.java": {
+              "vulnerableComponents": {
+                "MessageBytes": [
+                  "setCharset(Charset)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/connector/Request.java": {
+              "vulnerableComponents": {
+                "Request": [
+                  "doGetSession(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/connector/Connector.java": {
+              "vulnerableComponents": {
+                "Connector": [
+                  "getMapper()",
+                  "setMaxParameterCount(int)",
+                  "getMaxParameterCount()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "processParameters(byte[], int, int, Charset)",
+                  "recycle()",
+                  "processParameters(byte[], int, int)",
+                  "setQueryStringEncoding(String)",
+                  "addParameterValues(String, String[])",
+                  "urlDecode(ByteChunk)",
+                  "getParameterValues(String)",
+                  "processParameters(MessageBytes, String)",
+                  "addParameter(String, String)",
+                  "handleQueryParameters()",
+                  "setURLDecoder(UDecoder)",
+                  "setQuery(MessageBytes)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/buf/ByteChunk.java": {
+              "vulnerableComponents": {
+                "ByteChunk": [
+                  "makeSpace(int)",
+                  "toString()",
+                  "recycle()",
+                  "setCharset(Charset)",
+                  "getCharset()"
+                ]
+              }
+            }
+          }
+        },
+        "1190372": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1190372": {
+            "test/org/apache/tomcat/util/http/TestParameters.java": {
+              "vulnerableComponents": {
+                "TestParameters": [
+                  "testNonExistantParameter()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/buf/ByteChunk.java": {
+              "vulnerableComponents": {
+                "ByteChunk": []
+              }
+            }
+          }
+        },
+        "1190482": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1190482": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "addParameterValues(String, String[])"
+                ]
+              }
+            }
+          }
+        },
+        "1194917": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1194917": {
+            "java/org/apache/tomcat/util/buf/B2CConverter.java": {
+              "vulnerableComponents": {
+                "B2CConverter": [
+                  "convert(ByteChunk, CharChunk, int)"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/http/TestParameters.java": {
+              "vulnerableComponents": {
+                "TestParameters": [
+                  "testAddParameters()",
+                  "doTestProcessParametersByteArrayIntInt(int, Parameter[])",
+                  "testProcessParametersByteArrayIntInt()",
+                  "testNonExistantParameter()",
+                  "testAddParametersLimit()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "handleQueryParameters()",
+                  "recycle()",
+                  "addParameter(String, String)",
+                  "urlDecode(ByteChunk)",
+                  "setParseFailed(boolean)",
+                  "processParameters(byte[], int, int, Charset)",
+                  "processParameters(MessageBytes, String)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/buf/ByteChunk.java": {
+              "vulnerableComponents": {
+                "ByteChunk": [
+                  "toString()"
+                ]
+              }
+            }
+          }
+        },
+        "1195225": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195225": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "handleQueryParameters()",
+                  "recycle()"
+                ]
+              }
+            }
+          }
+        },
+        "1195226": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195226": {
+            "java/org/apache/catalina/connector/Request.java": {
+              "vulnerableComponents": {
+                "Request": [
+                  "parseParts()"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/http/TestParameters.java": {
+              "vulnerableComponents": {
+                "TestParameters": [
+                  "testAddParameters()",
+                  "testNonExistantParameter()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "processParameters(byte[], int, int, Charset)",
+                  "setParseFailed(boolean)",
+                  "handleQueryParameters()"
+                ]
+              }
+            }
+          }
+        },
+        "1195537": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195537": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "addParameterValues(String, String[])",
+                  "urlDecode(ByteChunk)"
+                ]
+              }
+            }
+          }
+        },
+        "1195909": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195909": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "addParameterValues(String, String[])"
+                ]
+              }
+            }
+          }
+        },
+        "1195944": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195944": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "processParameters(byte[], int, int, Charset)"
+                ]
+              }
+            }
+          }
+        },
+        "1195951": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195951": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "processParameters(byte[], int, int, Charset)"
+                ]
+              }
+            }
+          }
+        },
+        "1195977": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1195977": {
+            "java/org/apache/catalina/connector/Request.java": {
+              "vulnerableComponents": {
+                "Request": [
+                  "parseParts()"
+                ]
+              }
+            },
+            "test/org/apache/tomcat/util/http/TestParameters.java": {
+              "vulnerableComponents": {
+                "TestParameters": [
+                  "testAddParametersLimit()",
+                  "doTestProcessParametersByteArrayIntInt(int, Parameter[])",
+                  "testProcessParametersByteArrayIntInt()",
+                  "testAddParameters()",
+                  "testInternal()"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "handleQueryParameters()",
+                  "processParameters(byte[], int, int, Charset)"
+                ]
+              }
+            }
+          }
+        },
+        "1198641": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1198641": {
+            "java/org/apache/tomcat/util/http/Parameters.java": {
+              "vulnerableComponents": {
+                "Parameters": [
+                  "getParameterValues(String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.22-src": {
+      "CVE-2011-3375": {
+        "1176592": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1176592": {
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "endRequest()",
+                  "prepareRequest()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/connector/CoyoteAdapter.java": {
+              "vulnerableComponents": {
+                "CoyoteAdapter": [
+                  "log(org.apache.coyote.Request, org.apache.coyote.Response, long)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpProcessor.java": {
+              "vulnerableComponents": {
+                "AjpProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpNioProcessor.java": {
+              "vulnerableComponents": {
+                "AjpNioProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProcessor": [
+                  "prepareRequest()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProcessor.java": {
+              "vulnerableComponents": {
+                "AjpAprProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2011-3376": {
+        "1176588": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1176588": {
+            "java/org/apache/catalina/core/DefaultInstanceManager.java": {
+              "vulnerableComponents": {
+                "DefaultInstanceManager": [
+                  "checkAccess(Class)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.21-src": {
+      "CVE-2011-3190": {
+        "1162958": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1162958": {
+            "java/org/apache/coyote/ajp/AjpProcessor.java": {
+              "vulnerableComponents": {
+                "AjpProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpNioProcessor.java": {
+              "vulnerableComponents": {
+                "AjpNioProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AbstractAjpProcessor.java": {
+              "vulnerableComponents": {
+                "AbstractAjpProcessor": [
+                  "finish()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProcessor.java": {
+              "vulnerableComponents": {
+                "AjpAprProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.20-src": {
+      "CVE-2011-2729": {}
+    }
+  },
+  {
+    "apache-tomcat-7.0.19-src": {
+      "CVE-2011-2526": {
+        "1145383": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1145383": {
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1145489": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1145489": {
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1145571": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1145571": {
+            "java/org/apache/tomcat/util/net/NioEndpoint.java": {
+              "vulnerableComponents": {
+                "NioEndpoint": [
+                  "processSendfile(SelectionKey, KeyAttachment, boolean, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1145694": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1145694": {
+            "java/org/apache/coyote/http11/Http11AprProcessor.java": {
+              "vulnerableComponents": {
+                "Http11AprProcessor": [
+                  "process(SocketWrapper)"
+                ]
+              }
+            },
+            "java/org/apache/tomcat/util/net/AprEndpoint.java": {
+              "vulnerableComponents": {
+                "AprEndpoint": [
+                  "add(SendfileData)"
+                ]
+              }
+            }
+          }
+        },
+        "1146005": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1146005": {
+            "java/org/apache/catalina/connector/Request.java": {
+              "vulnerableComponents": {
+                "Request": [
+                  "setAttribute(String, Object)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2011-2204": {
+        "1140070": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1140070": {
+            "java/org/apache/catalina/users/MemoryUser.java": {
+              "vulnerableComponents": {
+                "MemoryUser": [
+                  "toString()",
+                  "toXml()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/mbeans/MemoryUserDatabaseMBean.java": {
+              "vulnerableComponents": {
+                "MemoryUserDatabaseMBean": [
+                  "createGroup(String, String)",
+                  "createRole(String, String)",
+                  "removeGroup(String)",
+                  "createUser(String, String, String)",
+                  "findRole(String)",
+                  "removeRole(String)",
+                  "findUser(String)",
+                  "removeUser(String)",
+                  "findGroup(String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/users/MemoryUserDatabase.java": {
+              "vulnerableComponents": {
+                "MemoryUserDatabase": [
+                  "save()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2011-2481": {
+        "1137753": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1137753": {
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "setDefaultWebXml(String)",
+                  "getDefaultWebXml()",
+                  "createWebXmlDigester(boolean, boolean)"
+                ]
+              }
+            }
+          }
+        },
+        "1138788": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1138788": {
+            "java/org/apache/catalina/startup/TldConfig.java": {
+              "vulnerableComponents": {
+                "TldConfig": [
+                  "createTldDigester(boolean, boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "createWebXmlDigester(boolean, boolean)",
+                  "init()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.14-src": {
+      "CVE-2011-1582": {
+        "1100832": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1100832": {
+            "java/org/apache/catalina/core/StandardWrapper.java": {
+              "vulnerableComponents": {
+                "StandardWrapper": [
+                  "servletSecurityAnnotationScan()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.12-src": {
+      "CVE-2011-1183": {
+        "1087643": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1087643": {
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": [
+                  "getPreemptiveAuthentication()",
+                  "setPreemptiveAuthentication(boolean)",
+                  "setFireRequestListenersOnForwards(boolean)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "authenticatorConfig()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/AuthenticatorBase.java": {
+              "vulnerableComponents": {
+                "AuthenticatorBase": [
+                  "invoke(Request, Response)"
+                ]
+              }
+            },
+            "test/org/apache/catalina/core/TestStandardWrapper.java": {
+              "vulnerableComponents": {
+                "TestStandardWrapper": [
+                  "testSecurityAnnotationsNoWebXmlLoginConfig()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Context.java": {
+              "vulnerableComponents": {
+                "Context": [
+                  "setPreemptiveAuthentication(boolean)",
+                  "getPreemptiveAuthentication()"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2011-1184": {
+        "1087655": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1087655": {
+            "java/org/apache/catalina/realm/RealmBase.java": {
+              "vulnerableComponents": {
+                "RealmBase": [
+                  "authenticate(String, String, String, String, String, String, String, String)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/DigestAuthenticator.java": {
+              "vulnerableComponents": {
+                "DigestAuthenticator": [
+                  "getCount()",
+                  "setTimestamp(long)",
+                  "getTimestamp()",
+                  "validate(Request, String, LoginConfig)",
+                  "setAuthenticateHeader(HttpServletRequest, HttpServletResponse, LoginConfig, String, boolean)",
+                  "isNonceStale()",
+                  "authenticate(Realm)",
+                  "startInternal()",
+                  "setCount(long)",
+                  "generateNonce(Request)",
+                  "authenticate(Request, HttpServletResponse, LoginConfig)",
+                  "getCnonceCacheSize()",
+                  "setCnonceCacheSize(int)",
+                  "getKey()",
+                  "setKey(String)",
+                  "getNonceValidity()",
+                  "setNonceValidity(long)",
+                  "getOpaque()",
+                  "setOpaque(String)",
+                  "isValidateUri()",
+                  "setValidateUri(boolean)"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "CVE-2011-1475": {
+        "1086349": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1086349": {
+            "java/org/apache/coyote/http11/Http11AprProtocol.java": {
+              "vulnerableComponents": {
+                "Http11AprProtocol": [
+                  "process(SocketWrapper)",
+                  "asyncDispatch(SocketWrapper, SocketStatus)",
+                  "event(SocketWrapper, SocketStatus)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11NioProcessor.java": {
+              "vulnerableComponents": {
+                "Http11NioProcessor": [
+                  "process(NioChannel)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpAprProtocol.java": {
+              "vulnerableComponents": {
+                "AjpAprProtocol": [
+                  "process(SocketWrapper)",
+                  "asyncDispatch(SocketWrapper, SocketStatus)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/Http11Protocol.java": {
+              "vulnerableComponents": {
+                "Http11Protocol": [
+                  "process(SocketWrapper, SocketStatus)"
+                ]
+              }
+            },
+            "java/org/apache/coyote/ajp/AjpProtocol.java": {
+              "vulnerableComponents": {
+                "AjpProtocol": [
+                  "process(SocketWrapper, SocketStatus)"
+                ]
+              }
+            }
+          }
+        },
+        "1086352": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1086352": {
+            "java/org/apache/catalina/connector/CoyoteAdapter.java": {
+              "vulnerableComponents": {
+                "CoyoteAdapter": [
+                  "log(org.apache.coyote.Request, org.apache.coyote.Response, long)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.11-src": {
+      "CVE-2011-1088": {
+        "1076586": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1076586": {
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": []
+              }
+            },
+            "java/org/apache/catalina/startup/Tomcat.java": {
+              "vulnerableComponents": {
+                "Tomcat": [
+                  "lifecycleEvent(LifecycleEvent)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/AuthenticatorBase.java": {
+              "vulnerableComponents": {
+                "AuthenticatorBase": [
+                  "invoke(Request, Response)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardWrapper.java": {
+              "vulnerableComponents": {
+                "StandardWrapper": [
+                  "loadServlet()"
+                ]
+              }
+            }
+          }
+        },
+        "1076587": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1076587": {
+            "java/org/apache/catalina/authenticator/AuthenticatorBase.java": {
+              "vulnerableComponents": {
+                "AuthenticatorBase": [
+                  "invoke(Request, Response)"
+                ]
+              }
+            }
+          }
+        },
+        "1077995": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1077995": {
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": [
+                  "getProcessingTime()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/Wrapper.java": {
+              "vulnerableComponents": {
+                "Wrapper": [
+                  "setServletSecurityAnnotationScanRequired(boolean)",
+                  "servletSecurityAnnotationScan()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/authenticator/AuthenticatorBase.java": {
+              "vulnerableComponents": {
+                "AuthenticatorBase": [
+                  "invoke(Request, Response)"
+                ]
+              }
+            },
+            "test/org/apache/catalina/core/TestStandardWrapper.java": {
+              "vulnerableComponents": {
+                "TestStandardWrapper": [
+                  "doTestSecurityAnnotationsAddServlet(boolean)",
+                  "testSecurityAnnotationsAddServlet1()",
+                  "testSecurityAnnotationsAddServlet2()",
+                  "testSecurityAnnotationsNoWebXmlConstraints()"
+                ]
+              }
+            },
+            "java/org/apache/catalina/core/StandardWrapper.java": {
+              "vulnerableComponents": {
+                "StandardWrapper": [
+                  "servletSecurityAnnotationScan()",
+                  "setServletSecurityAnnotationScanRequired(boolean)",
+                  "processServletSecurityAnnotation(Class)",
+                  "loadServlet()"
+                ]
+              }
+            }
+          }
+        },
+        "1079752": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1079752": {
+            "java/org/apache/catalina/startup/ContextConfig.java": {
+              "vulnerableComponents": {
+                "ContextConfig": [
+                  "authenticatorConfig()"
+                ]
+              }
+            },
+            "test/org/apache/catalina/core/TestStandardWrapper.java": {
+              "vulnerableComponents": {
+                "TestStandardWrapper": [
+                  "testSecurityAnnotationsNoWebXmlConstraints()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.8-src": {
+      "CVE-2011-0534": {
+        "1065939": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1065939": {
+            "java/org/apache/coyote/http11/InternalNioInputBuffer.java": {
+              "vulnerableComponents": {
+                "InternalNioInputBuffer": [
+                  "parseHeaders()",
+                  "parseRequestLine(boolean)",
+                  "expand(int)",
+                  "fill(boolean, boolean)",
+                  "setSocket(NioChannel)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.6-src": {
+      "CVE-2011-0013": {
+        "1057279": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1057279": {
+            "java/org/apache/catalina/manager/StatusTransformer.java": {
+              "vulnerableComponents": {
+                "StatusTransformer": [
+                  "writeWrapper(PrintWriter, ObjectName, MBeanServer, int)",
+                  "writeDetailedState(PrintWriter, MBeanServer, int)",
+                  "writeContext(PrintWriter, ObjectName, MBeanServer, int)"
+                ]
+              }
+            },
+            "java/org/apache/catalina/manager/HTMLManagerServlet.java": {
+              "vulnerableComponents": {
+                "HTMLManagerServlet": [
+                  "list(HttpServletRequest, HttpServletResponse, String, StringManager)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.5-src": {
+      "CVE-2010-4172": {
+        "1037778": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1037778": {
+            "java/org/apache/catalina/manager/JspHelper.java": {
+              "vulnerableComponents": {
+                "JspHelper": [
+                  "localeToString(Locale)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.4-src": {
+      "CVE-2010-3718": {
+        "1022134": {
+          "https://svn.apache.org/viewvc?view=rev&rev=1022134": {
+            "java/org/apache/catalina/core/StandardContext.java": {
+              "vulnerableComponents": {
+                "StandardContext": [
+                  "postWorkDirectory()"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "apache-tomcat-7.0.2-src": {
+      "CVE-2010-2227": {
+        "958911": {
+          "https://svn.apache.org/viewvc?view=rev&rev=958911": {
+            "java/org/apache/coyote/http11/filters/BufferedInputFilter.java": {
+              "vulnerableComponents": {
+                "BufferedInputFilter": [
+                  "recycle()"
+                ]
+              }
+            },
+            "java/org/apache/coyote/http11/AbstractHttp11Processor.java": {
+              "vulnerableComponents": {
+                "AbstractHttp11Processor": [
+                  "initializeFilters()",
+                  "addInputFilter(InputFilter[], String)"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
