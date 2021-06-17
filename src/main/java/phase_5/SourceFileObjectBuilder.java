@@ -1,6 +1,4 @@
-// PHASE 4
-
-package phase_4;
+package phase_5;
 
 import core.SourceFileObjectInitializer;
 import org.json.JSONArray;
@@ -10,18 +8,17 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class GroundTruthJSONDataUpdater {
+public class SourceFileObjectBuilder {
 
-    public void readGroundTruthPhase2JsonData() throws IOException {
+    public void buildKeysForWhollyAddedMethods () throws IOException {
 
         String lineNumber;
-        String groundTruthDataPhase3path = "ground_truth_phase_3.json";
-        String groundTruthDataPhase4Data = new String((Files.readAllBytes(Paths.get(groundTruthDataPhase3path))));
-        JSONArray resolutionVersionObjects = new JSONArray(groundTruthDataPhase4Data);
+        String groundTruthDataPhase4path = "ground_truth_phase_4.json";
+        String groundTruthDataPhase5Data = new String((Files.readAllBytes(Paths.get(groundTruthDataPhase4path))));
+        JSONArray resolutionVersionObjects = new JSONArray(groundTruthDataPhase5Data);
 
         for (int i = 0; i < resolutionVersionObjects.length(); i++) {
 
@@ -31,7 +28,7 @@ public class GroundTruthJSONDataUpdater {
             for (Object resolutionVersionObjectKey : resolutionVersionObjectKeys) {
 
                 String resolutionVersion = (String) resolutionVersionObjectKey;
-                System.out.println("Now processing: " + resolutionVersion);
+                System.out.println("Building keys for: " + resolutionVersion);
                 JSONObject cveIdObject = (JSONObject) resolutionVersionObject.get(resolutionVersion);
                 Set<JSONObject> cveIdObjectKeys = cveIdObject.keySet();
 
@@ -57,8 +54,15 @@ public class GroundTruthJSONDataUpdater {
                             for (Object filePathSuffixObjectKey : filePathSuffixObjectKeys) {
 
                                 String filePathSuffix = (String) filePathSuffixObjectKey;
+
+                                // Skip test directories. This is based on the assumption that test code cannot be considered vulnerable.
+                                if (filePathSuffix.startsWith("test/")) {
+                                    continue;
+                                }
+
                                 JSONObject lineNumberObject = (JSONObject) fileSuffixObject.get(filePathSuffix);
                                 Set<JSONObject> lineNumberObjectKeys = lineNumberObject.keySet();
+
                                 String filePathPrefix = "E:/Year 1 Project Dataset/Dataset/" + resolutionVersion + "/";
                                 String sourceFilePath = filePathPrefix + filePathSuffix;
                                 TreeSet<Integer> modifiedLines = new TreeSet<>();
@@ -67,23 +71,11 @@ public class GroundTruthJSONDataUpdater {
                                 for (Object lineNumberObjectKey : lineNumberObjectKeys) {
 
                                     lineNumber = (String) lineNumberObjectKey;
-                                    JSONObject methodSignatureAndClassNameObject = (JSONObject) lineNumberObject.get(lineNumber);
 
+                                    // Ensure that the path is exists. For example, this if-statement will clearly not run if the path directs to a removable drive.
                                     if (sourceFile.exists()) {
-
                                         modifiedLines.add(Integer.parseInt(lineNumber));
-                                        LinkedHashMap<Integer, LinkedHashMap<String, String>> lineNumberAndMethodSignatureAndClassName = new SourceFileObjectInitializer().buildSourceFileObject(sourceFilePath, resolutionVersion, modifiedLines);
-                                        int lineNumber_int = Integer.parseInt(lineNumber);
-                                        LinkedHashMap<String, String> methodSignatureAndClassName = lineNumberAndMethodSignatureAndClassName.get(lineNumber_int);
-
-                                        if (methodSignatureAndClassName != null) {
-
-                                            String className = methodSignatureAndClassName.get("className");
-                                            String methodSignature = methodSignatureAndClassName.get("methodSignature");
-                                            methodSignatureAndClassNameObject.put("className", className);
-                                            methodSignatureAndClassNameObject.put("methodSignature", methodSignature);
-
-                                        }
+                                        new SourceFileObjectInitializer().buildSourceFileObjectKey(sourceFilePath, resolutionVersion, modifiedLines);
                                     }
                                 }
                             }
@@ -92,9 +84,5 @@ public class GroundTruthJSONDataUpdater {
                 }
             }
         }
-        // FileWriter fileWriter = new FileWriter("ground_truth_phase_4.json");
-        // fileWriter.write(resolutionVersionObjects.toString());
-        // fileWriter.close();
-        System.out.println("Phase 4 completed!");
     }
 }

@@ -1,8 +1,8 @@
 package phase_5;
 
+import core.SourceFileObjectInitializer;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import phase_4.SourcefileObjectBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class VulnerableComponentsProcessor {
 
     public void processVulnerableComponents() throws IOException {
 
-        String lineNumber = null;
+        String lineNumber;
         String groundTruthDataPhase4path = "ground_truth_phase_4.json";
         String groundTruthDataPhase5Data = new String((Files.readAllBytes(Paths.get(groundTruthDataPhase4path))));
         JSONArray resolutionVersionObjects = new JSONArray(groundTruthDataPhase5Data);
@@ -62,6 +62,12 @@ public class VulnerableComponentsProcessor {
                             for (Object filePathSuffixObjectKey : filePathSuffixObjectKeys) {
 
                                 String filePathSuffix = (String) filePathSuffixObjectKey;
+
+                                // Skip test directories. This is based on the assumption that test code cannot be considered vulnerable.
+                                if (filePathSuffix.startsWith("test/")) {
+                                    continue;
+                                }
+
                                 JSONObject lineNumberObject = (JSONObject) fileSuffixObject.get(filePathSuffix);
                                 Set<JSONObject> lineNumberObjectKeys = lineNumberObject.keySet();
 
@@ -69,7 +75,6 @@ public class VulnerableComponentsProcessor {
                                 String sourceFilePath = filePathPrefix + filePathSuffix;
                                 TreeSet<Integer> modifiedLines = new TreeSet<>();
                                 File sourceFile = new File(sourceFilePath);
-
                                 String className = null;
                                 String methodSignature;
                                 LinkedHashSet<String> methodSignatures = new LinkedHashSet<>();
@@ -80,10 +85,11 @@ public class VulnerableComponentsProcessor {
 
                                     lineNumber = (String) lineNumberObjectKey;
 
+                                    // Ensure that the path is exists. For example, this if-statement will clearly not run if the path directs to a removable drive.
                                     if (sourceFile.exists()) {
 
                                         modifiedLines.add(Integer.parseInt(lineNumber));
-                                        LinkedHashMap<Integer, LinkedHashMap<String, String>> lineNumberAndMethodSignatureAndClassName = new SourcefileObjectBuilder().buildSourceFileObject(sourceFilePath, resolutionVersion, modifiedLines);
+                                        LinkedHashMap<Integer, LinkedHashMap<String, String>> lineNumberAndMethodSignatureAndClassName = new SourceFileObjectInitializer().buildSourceFileObject(sourceFilePath, resolutionVersion, modifiedLines);
                                         int lineNumber_int = Integer.parseInt(lineNumber);
                                         LinkedHashMap<String, String> methodSignatureAndClassName = lineNumberAndMethodSignatureAndClassName.get(lineNumber_int);
 
